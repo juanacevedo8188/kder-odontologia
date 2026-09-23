@@ -32,4 +32,6 @@ Tomados de directorios públicos, no verificados con Kder:
 - Tratamientos: odontología general, endodoncia, odontopediatría, prótesis y ortodoncia.
 - Faltan horarios, lista de obras sociales, fotos y profesionales.
 
+La foto del cierre (`dist/sonrisa.jpg`) es de stock: confirmar la licencia (Pexels/Unsplash) antes de publicar. Para cambiarla, reemplazar el archivo y ajustar `--focus-x`, `--focus-y` y `--zoom-start` en `style.css`.
+
 Se mantiene `noindex` mientras sea una propuesta. Las ilustraciones son conceptuales.

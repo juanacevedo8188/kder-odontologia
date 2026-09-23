@@ -2,7 +2,6 @@
 (() => {
  const section=document.querySelector('.smile-finale'),zoom=section.querySelector('.smile-zoom');
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
- const ZOOM=6;
  const ease=t=>1-Math.pow(1-t,3);
  const clamp=value=>Math.min(1,Math.max(0,value));
  let scheduled=false;
@@ -12,7 +11,8 @@
   const travel=Math.max(1,section.offsetHeight-window.innerHeight);
   const progress=clamp((window.scrollY-section.offsetTop)/travel);
   const zoomOut=ease(clamp(progress/.7));
-  section.style.setProperty('--zoom',(ZOOM-(ZOOM-1)*zoomOut).toFixed(3));
+  const start=parseFloat(getComputedStyle(zoom).getPropertyValue('--zoom-start'))||6; // la foto no aguanta tanto zoom como la ilustración
+  section.style.setProperty('--zoom',(start-(start-1)*zoomOut).toFixed(3));
   // El foco se centra en el diente donde arranca el zoom (mismo punto que transform-origin).
   const style=getComputedStyle(zoom),fx=parseFloat(style.getPropertyValue('--focus-x'))/100,fy=parseFloat(style.getPropertyValue('--focus-y'))/100;
   section.style.setProperty('--spot-x',`${zoom.offsetLeft+zoom.offsetWidth*fx}px`);

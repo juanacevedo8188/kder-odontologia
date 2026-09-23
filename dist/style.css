@@ -205,9 +205,9 @@ h3{font-size:21px;line-height:1.25;margin:16px 0 10px}
 .finale-sticky::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 30vmin 46vmin at var(--spot-x,50%) var(--spot-y,42%),transparent 0,transparent 55%,#041d1fd9 100%);opacity:var(--spot,1)}
 .finale-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
 /* --focus-x / --focus-y: punto donde arranca el zoom (el diente). Ajustar según la foto. */
-.smile-zoom{--focus-x:47.6%;--focus-y:52.1%;width:min(860px,94vw);transform:scale(var(--zoom,6));transform-origin:var(--focus-x) var(--focus-y)}
-.smile-zoom:has(.smile-photo){--focus-x:50%;--focus-y:50%}
-.smile-photo{display:block;width:100%;height:auto;border-radius:28px;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 60%,transparent 100%)}
+.smile-zoom{--focus-x:47.6%;--focus-y:52.1%;--zoom-start:6;width:min(860px,94vw);transform:scale(var(--zoom,var(--zoom-start)));transform-origin:var(--focus-x) var(--focus-y)}
+.smile-zoom:has(.smile-photo){--focus-x:55.6%;--focus-y:51.6%;--zoom-start:3.2;width:min(860px,96vw,84vh)}
+.smile-photo{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,transparent 100%)}
 .smile-zoom:has(.smile-photo) .smile-art{display:none}
 .smile-art{display:block;width:100%;height:auto;overflow:visible}
 .smile-sparkles{opacity:var(--sparkle,0)}
