@@ -60,3 +60,23 @@ document.querySelector('#copy').addEventListener('click',async()=>{
  try{await navigator.clipboard.writeText(document.querySelector('#message').textContent);document.querySelector('#copy-status').textContent='Mensaje copiado.';}
  catch{document.querySelector('#copy-status').textContent='No se pudo copiar automáticamente. Podés seleccionar y copiar el texto.';}
 });
+
+// Hero: la muela se inclina siguiendo el mouse y los números cuentan al cargar.
+(()=>{
+ const stage=document.querySelector('.hero-stage'),tilt=document.querySelector('.stage-tilt');
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(!stage||reduce){return;}
+ const hero=document.querySelector('.hero-shell');
+ hero.addEventListener('pointermove',event=>{
+  const box=stage.getBoundingClientRect();
+  const x=(event.clientX-box.left)/box.width-.5,y=(event.clientY-box.top)/box.height-.5;
+  tilt.style.setProperty('--ry',`${Math.max(-1,Math.min(1,x))*14}deg`);
+  tilt.style.setProperty('--rx',`${Math.max(-1,Math.min(1,y))*-10}deg`);
+ });
+ hero.addEventListener('pointerleave',()=>{tilt.style.setProperty('--ry','0deg');tilt.style.setProperty('--rx','0deg');});
+ document.querySelectorAll('[data-count]').forEach(item=>{
+  const target=Number(item.dataset.count),start=performance.now()+500;
+  const step=now=>{const t=Math.min(1,Math.max(0,(now-start)/1200));item.textContent=String(Math.round(target*(1-Math.pow(1-t,3))));if(t<1){requestAnimationFrame(step);}};
+  item.textContent='0';requestAnimationFrame(step);
+ });
+})();

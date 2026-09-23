@@ -14,6 +14,7 @@
   brush.setAttribute('transform',`translate(0 ${y})`);
   scene.style.setProperty('--shine',String(Math.max(0,(progress-.7)/.3)));
   scene.classList.toggle('is-clean',progress>=.94);
+  scene.classList.toggle('in-hero',window.scrollY<window.innerHeight*.55);
   label.textContent=stages.filter(([from])=>progress>=from).pop()[1];
  }
  function schedule(){if(!scheduled){scheduled=true;window.requestAnimationFrame(draw);}}
