@@ -16,7 +16,7 @@
   brush.setAttribute('transform',`translate(0 ${y})`);
   scene.style.setProperty('--shine',String(Math.max(0,(progress-.7)/.3)));
   scene.classList.toggle('is-clean',progress>=.94);
-  scene.classList.toggle('in-hero',window.scrollY<window.innerHeight*.55);
+  scene.classList.toggle('in-hero',document.querySelector('.hero-shell').getBoundingClientRect().bottom>window.innerHeight*.35);
   scene.classList.toggle('gone',finale.getBoundingClientRect().top<window.innerHeight*.6);
   label.textContent=stages.filter(([from])=>progress>=from).pop()[1];
  }

@@ -41,6 +41,4 @@ Tomados de directorios públicos, no verificados con Kder:
 - Tratamientos: odontología general, endodoncia, odontopediatría, prótesis y ortodoncia.
 - Faltan horarios, lista de obras sociales, fotos y profesionales.
 
-La foto del hero (`dist/hero-sonrisa.jpg`) es de stock: confirmar la licencia antes de publicar, o reemplazarla por una foto propia del consultorio (vertical, 4:5).
-
 Se mantiene `noindex` mientras sea una propuesta. Las ilustraciones son conceptuales.
