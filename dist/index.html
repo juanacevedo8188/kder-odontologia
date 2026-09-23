@@ -117,6 +117,7 @@
 
  <figure class="hero-stage">
   <div class="stage-tilt">
+   <div class="molar-box">
    <svg class="molar-art" viewBox="0 0 440 540" role="img" aria-label="Ilustración de una muela sana y brillante">
     <defs>
      <path id="molar" d="M90 168C82 122 106 80 146 76c24-3 38 10 46 24 10-18 26-28 44-28 20 0 34 12 42 28 10-18 30-26 48-20 32 12 40 50 26 90-8 32-10 54-20 76-6 32-2 84-6 134-2 40-12 70-30 70s-20-30-24-60c-4-34-14-74-52-88-38 14-48 54-52 88-4 30-6 60-24 60s-28-30-30-70c-4-50 0-102-6-134-10-22-12-46-18-78Z"/>
@@ -156,7 +157,11 @@
      </g>
      <use href="#molar" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/>
     </g>
-    <g transform="rotate(-10 220 262)" clip-path="url(#front-half)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" style="stroke:var(--accent-hi)" stroke-opacity=".55" stroke-width="1.5"/></g>
+   </svg>
+   <canvas class="molar-3d" aria-hidden="true"></canvas>
+   <svg class="molar-front" viewBox="0 0 440 540" aria-hidden="true">
+    <defs><clipPath id="front-half-3d"><rect x="0" y="262" width="440" height="200"/></clipPath></defs>
+    <g transform="rotate(-10 220 262)" clip-path="url(#front-half-3d)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" style="stroke:var(--accent-hi)" stroke-opacity=".55" stroke-width="1.5"/></g>
     <g class="orbit-dots" transform="rotate(-10 220 262)">
      <circle r="5" style="fill:var(--accent-hi)"><animateMotion dur="9s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
      <circle r="3" style="fill:var(--accent)"><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
@@ -167,6 +172,7 @@
      <path d="M372 388l4 9 9 4-9 4-4 9-4-9-9-4 9-4Z"/>
     </g>
    </svg>
+   </div>
   </div>
   <div class="glass g1"><span class="g-icon">✓</span><div><strong>Previnca Salud</strong><small>Obras sociales y particulares</small></div></div>
   <div class="glass g2"><span class="g-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6-6-6-11a6 6 0 0 1 12 0c0 5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg></span><div><strong>3 sedes</strong><small>Centro · Sur · Norte</small></div></div>
@@ -361,6 +367,7 @@
 
 <script src="leaflet.js"></script>
 <script src="app.js"></script>
+<script src="molar3d.js"></script>
 <script src="journey.js"></script>
 <script src="motion.js"></script>
 <script src="bot.js"></script>

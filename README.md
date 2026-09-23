@@ -19,6 +19,7 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 - `dist/index.html`: contenido y estructura.
 - `dist/style.css`: estilos y diseño adaptable.
 - `dist/app.js`: mapa de sedes (`sedes`), consulta de obra social y formulario de turno.
+- `dist/molar3d.js`: muela 3D del hero en WebGL (raymarching, sin librerías). Si el navegador no tiene WebGL, se ve la ilustración SVG.
 - `dist/journey.js`: animación del diente con el scroll.
 - `dist/motion.js`: aparición de bloques al scrollear y cintas del cierre que se aceleran con el scroll.
 - `dist/bot.js`: asistente de turnos; las preguntas se editan en `BOT_CONFIG.steps`.
