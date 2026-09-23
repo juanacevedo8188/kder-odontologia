@@ -9,7 +9,7 @@
  function draw(){
   scheduled=false;
   // La limpieza termina justo cuando llega la sonrisa final.
-  const max=Math.max(1,finale.offsetTop-window.innerHeight*.35);
+  const max=Math.max(1,Math.min(finale.offsetTop-window.innerHeight*.35,document.documentElement.scrollHeight-window.innerHeight-1));
   const progress=reduce.matches?1:Math.min(1,Math.max(0,window.scrollY/max));
   const y=TOP+progress*(BOTTOM-TOP);
   clean.setAttribute('height',String(progress>=.94?540:y));
@@ -17,7 +17,7 @@
   scene.style.setProperty('--shine',String(Math.max(0,(progress-.7)/.3)));
   scene.classList.toggle('is-clean',progress>=.94);
   scene.classList.toggle('in-hero',window.scrollY<window.innerHeight*.55);
-  scene.classList.toggle('gone',window.scrollY>finale.offsetTop-window.innerHeight*.25);
+  scene.classList.toggle('gone',finale.getBoundingClientRect().top<window.innerHeight*.6);
   label.textContent=stages.filter(([from])=>progress>=from).pop()[1];
  }
  function schedule(){if(!scheduled){scheduled=true;window.requestAnimationFrame(draw);}}

@@ -117,67 +117,16 @@
 
  <figure class="hero-stage">
   <div class="stage-tilt">
-   <div class="molar-box">
-   <svg class="molar-art" viewBox="0 0 440 540" role="img" aria-label="Ilustración de una muela sana y brillante">
-    <defs>
-     <path id="molar" d="M90 168C82 122 106 80 146 76c24-3 38 10 46 24 10-18 26-28 44-28 20 0 34 12 42 28 10-18 30-26 48-20 32 12 40 50 26 90-8 32-10 54-20 76-6 32-2 84-6 134-2 40-12 70-30 70s-20-30-24-60c-4-34-14-74-52-88-38 14-48 54-52 88-4 30-6 60-24 60s-28-30-30-70c-4-50 0-102-6-134-10-22-12-46-18-78Z"/>
-     <clipPath id="molar-clip"><use href="#molar"/></clipPath>
-     <linearGradient id="m-side" x1="0" x2="1"><stop offset="0" stop-color="#d4c9b4"/><stop offset=".2" stop-color="#f3eee3"/><stop offset=".44" stop-color="#fffefb"/><stop offset=".7" stop-color="#f1ebdf"/><stop offset="1" stop-color="#c9bca4"/></linearGradient>
-     <linearGradient id="m-root" x1="0" x2="0" y1="0" y2="1"><stop offset=".44" stop-color="#e6d8bd" stop-opacity="0"/><stop offset=".66" stop-color="#e2d2b3" stop-opacity=".5"/><stop offset="1" stop-color="#c7b18a" stop-opacity=".9"/></linearGradient>
-     <radialGradient id="m-top" cx=".4" cy=".2" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-     <radialGradient id="halo" cx=".5" cy=".45" r=".5"><stop offset="0" style="stop-color:var(--accent)" stop-opacity=".55"/><stop offset=".55" style="stop-color:var(--brand-light)" stop-opacity=".18"/><stop offset="1" style="stop-color:var(--brand-light)" stop-opacity="0"/></radialGradient>
-     <linearGradient id="sweep" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-     <filter id="b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
-     <filter id="b6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
-     <filter id="b12" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
-     <clipPath id="front-half"><rect x="0" y="262" width="440" height="200"/></clipPath>
-    </defs>
-    <circle class="halo" cx="220" cy="240" r="215" fill="url(#halo)"/>
-    <g transform="rotate(-10 220 262)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" style="stroke:var(--accent-hi)" stroke-opacity=".28" stroke-width="1.5"/></g>
-    <ellipse class="floor-shadow" cx="220" cy="506" rx="118" ry="15" fill="#011414" opacity=".6" filter="url(#b12)"/>
-    <g class="molar-float">
-     <g clip-path="url(#molar-clip)">
-      <rect width="440" height="540" fill="url(#m-side)"/>
-      <rect width="440" height="540" fill="url(#m-root)"/>
-      <ellipse cx="190" cy="130" rx="160" ry="120" fill="url(#m-top)"/>
-      <g fill="#7d6a4b" filter="url(#b6)" opacity=".4"><ellipse cx="192" cy="104" rx="14" ry="26"/><ellipse cx="278" cy="102" rx="14" ry="26"/><ellipse cx="220" cy="318" rx="30" ry="44"/></g>
-      <ellipse cx="220" cy="252" rx="140" ry="7" fill="#8f7b58" opacity=".1" filter="url(#b6)"/>
-      <use href="#molar" fill="none" stroke="#8a7656" stroke-width="30" opacity=".45" filter="url(#b12)"/>
-      <use href="#molar" fill="none" style="stroke:var(--accent)" stroke-width="12" opacity=".75" filter="url(#b6)" transform="translate(-9 3)"/>
-      <g fill="#fff" filter="url(#b3)">
-       <ellipse cx="146" cy="100" rx="24" ry="10" transform="rotate(-22 146 100)"/>
-       <ellipse cx="236" cy="88" rx="20" ry="8" transform="rotate(-6 236 88)"/>
-       <ellipse cx="322" cy="96" rx="14" ry="6" opacity=".6" transform="rotate(20 322 96)"/>
-       <ellipse cx="128" cy="186" rx="9" ry="58" opacity=".85" transform="rotate(-6 128 186)"/>
-       <ellipse cx="138" cy="380" rx="6" ry="46" opacity=".4"/>
-       <ellipse cx="302" cy="372" rx="5" ry="36" opacity=".25"/>
-      </g>
-      <circle cx="140" cy="96" r="4" fill="#fff"/>
-      <g transform="rotate(16 220 270)"><rect class="sweep" x="-200" y="-80" width="130" height="720" fill="url(#sweep)"/></g>
-     </g>
-     <use href="#molar" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/>
-    </g>
-   </svg>
-   <canvas class="molar-3d" aria-hidden="true"></canvas>
-   <svg class="molar-front" viewBox="0 0 440 540" aria-hidden="true">
-    <defs><clipPath id="front-half-3d"><rect x="0" y="262" width="440" height="200"/></clipPath></defs>
-    <g transform="rotate(-10 220 262)" clip-path="url(#front-half-3d)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" style="stroke:var(--accent-hi)" stroke-opacity=".55" stroke-width="1.5"/></g>
-    <g class="orbit-dots" transform="rotate(-10 220 262)">
-     <circle r="5" style="fill:var(--accent-hi)"><animateMotion dur="9s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
-     <circle r="3" style="fill:var(--accent)"><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
-    </g>
-    <g class="stage-sparkles" fill="#ffffff">
-     <path d="M362 110l6 15 15 6-15 6-6 15-6-15-15-6 15-6Z"/>
-     <path d="M76 250l4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/>
-     <path d="M372 388l4 9 9 4-9 4-4 9-4-9-9-4 9-4Z"/>
-    </g>
-   </svg>
+   <div class="arch-back" aria-hidden="true"></div>
+   <div class="arch">
+    <img src="hero-sonrisa.jpg" alt="Primer plano de una sonrisa sana" width="960" height="1200" fetchpriority="high">
    </div>
+   <svg class="arch-sparkles" viewBox="0 0 100 100" aria-hidden="true"><path d="M88 8l2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/><path d="M6 58l1.5 3.5 3.5 1.5-3.5 1.5-1.5 3.5-1.5-3.5-3.5-1.5 3.5-1.5Z"/></svg>
   </div>
   <div class="glass g1"><span class="g-icon">✓</span><div><strong>Previnca Salud</strong><small>Obras sociales y particulares</small></div></div>
   <div class="glass g2"><span class="g-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6-6-6-11a6 6 0 0 1 12 0c0 5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg></span><div><strong>3 sedes</strong><small>Centro · Sur · Norte</small></div></div>
   <div class="glass g3"><span class="g-icon">☺</span><div><strong>Adultos y niños</strong><small>Odontopediatría</small></div></div>
-  <figcaption>Ilustración 3D conceptual · La versión final puede sumar fotos reales del consultorio.</figcaption>
+  <figcaption>Foto de stock ilustrativa · La versión final puede usar fotos reales del consultorio.</figcaption>
  </figure>
 </section>
 <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V40C240 90 480 0 720 22s480 70 720 10v58Z"/></svg>
@@ -332,20 +281,6 @@
 <section class="smile-finale" id="final">
  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Odontología general</span><i>✦</i><span>Endodoncia</span><i>✦</i><span>Odontopediatría</span><i>✦</i><span>Prótesis</span><i>✦</i><span>Ortodoncia</span><i>✦</i><span>Previnca Salud</span><i>✦</i><span>Obras sociales</span><i>✦</i><span>Particulares</span><i>✦</i><span>Centro · Sur · Norte</span><i>✦</i><span>Odontología general</span><i>✦</i><span>Endodoncia</span><i>✦</i><span>Odontopediatría</span><i>✦</i><span>Prótesis</span><i>✦</i><span>Ortodoncia</span><i>✦</i><span>Previnca Salud</span><i>✦</i><span>Obras sociales</span><i>✦</i><span>Particulares</span><i>✦</i><span>Centro · Sur · Norte</span><i>✦</i></div></div>
  <div class="wrap finale-content">
-  <svg class="finale-molar" viewBox="0 0 440 540" aria-hidden="true">
-   <circle cx="220" cy="250" r="210" fill="url(#halo)"/>
-   <g class="molar-float">
-    <g clip-path="url(#molar-clip)">
-     <rect width="440" height="540" fill="url(#m-side)"/>
-     <rect width="440" height="540" fill="url(#m-root)"/>
-     <ellipse cx="190" cy="130" rx="160" ry="120" fill="url(#m-top)"/>
-     <use href="#molar" fill="none" style="stroke:var(--accent)" stroke-width="12" opacity=".75" filter="url(#b6)" transform="translate(-9 3)"/>
-     <g fill="#fff" filter="url(#b3)"><ellipse cx="146" cy="100" rx="24" ry="10" transform="rotate(-22 146 100)"/><ellipse cx="128" cy="186" rx="9" ry="58" opacity=".85"/></g>
-     <g transform="rotate(16 220 270)"><rect class="sweep" x="-200" y="-80" width="130" height="720" fill="url(#sweep)"/></g>
-    </g>
-   </g>
-   <g class="stage-sparkles" fill="#ffffff"><path d="M372 90l7 17 17 7-17 7-7 17-7-17-17-7 17-7Z"/><path d="M60 230l5 12 12 5-12 5-5 12-5-12-12-5 12-5Z"/><path d="M380 380l5 11 11 5-11 5-5 11-5-11-11-5 11-5Z"/></g>
-  </svg>
   <p class="eyebrow">SONRISA SANA</p>
   <h2>Una sonrisa sana<br>empieza con una consulta.</h2>
   <a class="button light glow" href="https://wa.me/5493416121290?text=Hola%2C%20Kder.%20Quisiera%20pedir%20un%20turno." target="_blank" rel="noopener noreferrer">Pedir mi turno ↗</a>
@@ -367,7 +302,6 @@
 
 <script src="leaflet.js"></script>
 <script src="app.js"></script>
-<script src="molar3d.js"></script>
 <script src="journey.js"></script>
 <script src="motion.js"></script>
 <script src="bot.js"></script>

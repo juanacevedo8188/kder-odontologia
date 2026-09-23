@@ -70,8 +70,8 @@ document.querySelector('#copy').addEventListener('click',async()=>{
  hero.addEventListener('pointermove',event=>{
   const box=stage.getBoundingClientRect();
   const x=(event.clientX-box.left)/box.width-.5,y=(event.clientY-box.top)/box.height-.5;
-  tilt.style.setProperty('--ry',`${Math.max(-1,Math.min(1,x))*14}deg`);
-  tilt.style.setProperty('--rx',`${Math.max(-1,Math.min(1,y))*-10}deg`);
+  tilt.style.setProperty('--ry',`${Math.max(-1,Math.min(1,x))*6}deg`);
+  tilt.style.setProperty('--rx',`${Math.max(-1,Math.min(1,y))*-5}deg`);
  });
  hero.addEventListener('pointerleave',()=>{tilt.style.setProperty('--ry','0deg');tilt.style.setProperty('--rx','0deg');});
  document.querySelectorAll('[data-count]').forEach(item=>{

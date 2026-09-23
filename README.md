@@ -19,7 +19,6 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 - `dist/index.html`: contenido y estructura.
 - `dist/style.css`: estilos y diseño adaptable.
 - `dist/app.js`: mapa de sedes (`sedes`), consulta de obra social y formulario de turno.
-- `dist/molar3d.js`: muela 3D del hero en WebGL (raymarching, sin librerías). Si el navegador no tiene WebGL, se ve la ilustración SVG.
 - `dist/journey.js`: animación del diente con el scroll.
 - `dist/motion.js`: aparición de bloques al scrollear y cintas del cierre que se aceleran con el scroll.
 - `dist/bot.js`: asistente de turnos; las preguntas se editan en `BOT_CONFIG.steps`.
@@ -35,5 +34,7 @@ Tomados de directorios públicos, no verificados con Kder:
 - Sedes: Centro 9 de Julio 1161 (tel. 440-9138 / 448-2955), Sur Av. del Rosario 1138 (463-7430), Norte Av. Alberdi 266 (438-4539). Coordenadas del mapa aproximadas; “Cómo llegar” busca la dirección en Google Maps.
 - Tratamientos: odontología general, endodoncia, odontopediatría, prótesis y ortodoncia.
 - Faltan horarios, lista de obras sociales, fotos y profesionales.
+
+La foto del hero (`dist/hero-sonrisa.jpg`) es de stock: confirmar la licencia antes de publicar, o reemplazarla por una foto propia del consultorio (vertical, 4:5).
 
 Se mantiene `noindex` mientras sea una propuesta. Las ilustraciones son conceptuales.
