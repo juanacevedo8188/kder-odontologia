@@ -1,3 +1,10 @@
+/* Tipografías (archivos propios en fonts/, licencia SIL OFL) */
+@font-face{font-family:"Fraunces";font-style:normal;font-display:swap;font-weight:100 900;src:url(fonts/fraunces-latin-wght-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-style:italic;font-display:swap;font-weight:100 900;src:url(fonts/fraunces-latin-wght-italic.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-display:swap;font-weight:200 800;src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:normal;font-display:swap;font-weight:200 800;src:url(fonts/newsreader-latin-wght-normal.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-display:swap;font-weight:200 800;src:url(fonts/newsreader-latin-wght-italic.woff2) format("woff2")}
+@font-face{font-family:"Onest";font-style:normal;font-display:swap;font-weight:100 900;src:url(fonts/onest-latin-wght-normal.woff2) format("woff2")}
 :root{--ink:#0f3438;--teal:#0e7c7b;--teal-dark:#0a6261;--teal-light:#15a3a0;--soft:#e8f7f5;--line:#c4e7e3;--muted:#4d686b;--paper:#fbfefe;--coral:#ff8a70}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
@@ -326,3 +333,18 @@ h3{font-size:21px;line-height:1.25;margin:16px 0 10px}
  .journey-brush{display:none}
  .marquee-track{animation:none}
 }
+
+/* Sistema tipográfico: --font-display para títulos, --font-body para texto. */
+:root{--font-body:"Onest",system-ui,sans-serif;--font-display:"Fraunces",Georgia,serif;--display-weight:560;--display-track:-.022em;--em-style:italic}
+html[data-fonts=b]{--font-display:"Bricolage Grotesque",system-ui,sans-serif;--display-weight:700;--display-track:-.035em;--em-style:normal}
+html[data-fonts=c]{--font-display:"Newsreader",Georgia,serif;--display-weight:500;--display-track:-.02em;--em-style:italic}
+body{font-family:var(--font-body)}
+h1,.hero h1,h2,.finale-content h2,h3,.sede-card h3,.marquee span,.hero-stats strong{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:var(--display-track)}
+h3{font-weight:calc(var(--display-weight) + 40)}
+.hero h1 em{font-style:var(--em-style)}
+.brand{font-family:var(--font-display);font-weight:var(--display-weight)}
+/* Selector de tipografía de la propuesta (quitar al elegir la definitiva) */
+.demo{align-items:center}
+.font-switch{display:flex;align-items:center;gap:6px;letter-spacing:0}
+.font-switch button{background:#ffffff1a;color:#fff;border:1px solid #ffffff40;border-radius:999px;width:28px;height:24px;cursor:pointer;font-size:12px;font-weight:700;padding:0}
+.font-switch button[aria-pressed=true]{background:#5fe0d2;color:#052628;border-color:#5fe0d2}

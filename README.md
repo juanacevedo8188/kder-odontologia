@@ -22,6 +22,7 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 - `dist/journey.js`: animación del diente con el scroll.
 - `dist/motion.js`: aparición de bloques al scrollear y cintas del cierre que se aceleran con el scroll.
 - `dist/bot.js`: asistente de turnos; las preguntas se editan en `BOT_CONFIG.steps`.
+- `dist/fonts/`: tipografías propias (Fraunces, Bricolage Grotesque, Newsreader y Onest, licencia SIL OFL). La barra de propuesta tiene un selector A/B/C para compararlas; al elegir la definitiva, quitar el selector y las fuentes que no se usen.
 - Leaflet incluido en `dist` (licencia en `leaflet-LICENSE.txt`).
 
 ## Datos a confirmar con el consultorio

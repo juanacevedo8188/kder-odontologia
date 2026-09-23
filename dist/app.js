@@ -80,3 +80,17 @@ document.querySelector('#copy').addEventListener('click',async()=>{
   item.textContent='0';requestAnimationFrame(step);
  });
 })();
+
+// Selector de tipografía de la propuesta: A Fraunces · B Bricolage Grotesque · C Newsreader (texto: Onest).
+(()=>{
+ const buttons=document.querySelectorAll('[data-font-set]');
+ function apply(set){
+  document.documentElement.dataset.fonts=set;
+  buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.fontSet===set)));
+  try{localStorage.setItem('kder-fonts',set);}catch{}
+ }
+ let saved='a';
+ try{saved=localStorage.getItem('kder-fonts')||'a';}catch{}
+ apply(saved);
+ buttons.forEach(button=>button.addEventListener('click',()=>apply(button.dataset.fontSet)));
+})();
