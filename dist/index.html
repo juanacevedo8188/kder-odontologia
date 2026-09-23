@@ -16,41 +16,59 @@
 <!-- Recorrido del scroll: un cepillo baja por el diente y lo va dejando limpio. -->
 <div class="smile-journey" aria-hidden="true">
  <div class="journey-glow"></div>
- <svg class="journey-tooth" viewBox="0 0 200 380" preserveAspectRatio="xMidYMid meet">
+ <svg class="journey-tooth" viewBox="0 0 440 540" preserveAspectRatio="xMidYMid meet">
   <defs>
-   <linearGradient id="enamel" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f1fbfa"/><stop offset="1" stop-color="#cdebe8"/></linearGradient>
-   <linearGradient id="stained" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#efe2bd"/><stop offset="1" stop-color="#dcc99a"/></linearGradient>
-   <linearGradient id="gum" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f7b9c0"/><stop offset="1" stop-color="#f6d6d9" stop-opacity="0"/></linearGradient>
-   <clipPath id="clean-clip"><rect id="clean-rect" x="0" y="0" width="200" height="0"/></clipPath>
-   <path id="tooth-shape" d="M42 70C38 26 70 12 88 26c7 6 17 6 24 0 18-14 50 0 46 44-3 34-13 58-17 88-6 50-8 110-18 170-4 22-22 22-24 0l-6-92-6 92c-2 22-20 22-24 0-10-60-12-120-18-170-4-30-14-54-17-88Z"/>
+   <path id="j-molar" d="M90 168C82 122 106 80 146 76c24-3 38 10 46 24 10-18 26-28 44-28 20 0 34 12 42 28 10-18 30-26 48-20 32 12 40 50 26 90-8 32-10 54-20 76-6 32-2 84-6 134-2 40-12 70-30 70s-20-30-24-60c-4-34-14-74-52-88-38 14-48 54-52 88-4 30-6 60-24 60s-28-30-30-70c-4-50 0-102-6-134-10-22-12-46-18-78Z"/>
+   <clipPath id="j-clip"><use href="#j-molar"/></clipPath>
+   <clipPath id="clean-clip"><rect id="clean-rect" x="0" y="0" width="440" height="0"/></clipPath>
+   <linearGradient id="j-stain" x1="0" x2="1"><stop offset="0" stop-color="#cdb888"/><stop offset=".45" stop-color="#eadcb4"/><stop offset="1" stop-color="#c3ab78"/></linearGradient>
+   <linearGradient id="j-clean" x1="0" x2="1"><stop offset="0" stop-color="#d9d0bf"/><stop offset=".22" stop-color="#f5f1e8"/><stop offset=".45" stop-color="#fffefb"/><stop offset=".72" stop-color="#f2ede3"/><stop offset="1" stop-color="#cdc1aa"/></linearGradient>
+   <linearGradient id="j-gum" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f08f9b" stop-opacity=".9"/><stop offset=".5" stop-color="#f4aab3" stop-opacity=".55"/><stop offset="1" stop-color="#f8c9ce" stop-opacity="0"/></linearGradient>
+   <linearGradient id="j-gum-fade" x1="0" x2="1"><stop offset="0" stop-color="#000"/><stop offset=".18" stop-color="#fff"/><stop offset=".82" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+   <mask id="j-gum-mask"><rect width="440" height="540" fill="url(#j-gum-fade)"/></mask>
+   <filter id="j-b4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+   <filter id="j-b10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
-  <path class="gum" d="M22 172c0-22 22-30 40-24 14 5 24 12 38 12s24-7 38-12c18-6 40 2 40 24v110c0 34-34 56-78 56s-78-22-78-56Z" fill="url(#gum)"/>
   <!-- diente con sarro -->
-  <use href="#tooth-shape" fill="url(#stained)" stroke="#c9b37a" stroke-width="2"/>
-  <g class="plaque" fill="#c7ab62" opacity=".55">
-   <ellipse cx="72" cy="58" rx="12" ry="7"/><ellipse cx="128" cy="44" rx="9" ry="6"/><ellipse cx="104" cy="110" rx="15" ry="8"/><ellipse cx="66" cy="136" rx="8" ry="10"/><ellipse cx="138" cy="128" rx="10" ry="7"/><ellipse cx="82" cy="220" rx="6" ry="14"/><ellipse cx="122" cy="250" rx="6" ry="12"/>
+  <g clip-path="url(#j-clip)">
+   <rect width="440" height="540" fill="url(#j-stain)"/>
+   <use href="#j-molar" fill="none" stroke="#8d7447" stroke-width="26" opacity=".45" filter="url(#j-b10)"/>
+   <g fill="#a98b4e" opacity=".5" filter="url(#j-b4)">
+    <ellipse cx="150" cy="130" rx="22" ry="13"/><ellipse cx="268" cy="118" rx="18" ry="11"/><ellipse cx="214" cy="196" rx="30" ry="14"/><ellipse cx="128" cy="232" rx="14" ry="18"/><ellipse cx="310" cy="220" rx="18" ry="13"/><ellipse cx="150" cy="360" rx="10" ry="26"/><ellipse cx="290" cy="380" rx="10" ry="22"/>
+   </g>
   </g>
   <!-- diente limpio: se revela con el scroll -->
   <g clip-path="url(#clean-clip)">
-   <use href="#tooth-shape" fill="url(#enamel)" stroke="#8fd1cb" stroke-width="2"/>
-   <path d="M68 62c0-14 8-22 17-20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".95"/>
-   <path d="M68 94c-1 10 0 20 3 28" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+   <g clip-path="url(#j-clip)">
+    <rect width="440" height="540" fill="url(#j-clean)"/>
+    <use href="#j-molar" fill="none" stroke="#9b8864" stroke-width="26" opacity=".35" filter="url(#j-b10)"/>
+    <use href="#j-molar" fill="none" stroke="#7fe8dc" stroke-width="10" opacity=".6" filter="url(#j-b4)" transform="translate(-8 2)"/>
+    <g fill="#fff" filter="url(#j-b4)">
+     <ellipse cx="146" cy="100" rx="24" ry="10" transform="rotate(-22 146 100)"/>
+     <ellipse cx="236" cy="88" rx="20" ry="8"/>
+     <ellipse cx="128" cy="186" rx="9" ry="56" opacity=".85" transform="rotate(-6 128 186)"/>
+    </g>
+   </g>
+   <use href="#j-molar" fill="none" stroke="#8fd1cb" stroke-width="2"/>
   </g>
+  <!-- encía: abraza el cuello y se desvanece hacia abajo y a los costados -->
+  <path class="gum" mask="url(#j-gum-mask)" d="M24 258c30-24 62-20 84-12 18 7 30 10 44 10 22 0 44-8 68-8s46 8 68 8c14 0 26-3 44-10 22-8 54-12 84 12v230H24Z" fill="url(#j-gum)"/>
+  <path mask="url(#j-gum-mask)" d="M24 258c30-24 62-20 84-12 18 7 30 10 44 10 22 0 44-8 68-8s46 8 68 8c14 0 26-3 44-10 22-8 54-12 84 12" fill="none" stroke="#e57986" stroke-width="3" opacity=".7"/>
   <!-- cepillo -->
   <g id="journey-brush" class="journey-brush">
-   <rect x="-6" y="-7" width="212" height="3" rx="1.5" class="brush-line"/>
-   <g transform="translate(150 -26)">
-    <rect x="0" y="12" width="56" height="12" rx="6" fill="#0e7c7b"/>
-    <rect x="-4" y="0" width="30" height="14" rx="4" fill="#15a3a0"/>
-    <g fill="#ffffff" stroke="#9fdcd8" stroke-width=".8"><rect x="-2" y="-8" width="4" height="9" rx="1.5"/><rect x="4" y="-8" width="4" height="9" rx="1.5"/><rect x="10" y="-8" width="4" height="9" rx="1.5"/><rect x="16" y="-8" width="4" height="9" rx="1.5"/><rect x="22" y="-8" width="4" height="9" rx="1.5"/></g>
+   <rect x="30" y="-3" width="380" height="5" rx="2.5" class="brush-line"/>
+   <g transform="translate(318 -48)">
+    <rect x="30" y="26" width="110" height="22" rx="11" fill="#0e7c7b"/>
+    <rect x="-6" y="0" width="62" height="30" rx="9" fill="#15a3a0"/>
+    <g fill="#ffffff" stroke="#9fdcd8" stroke-width="1.5"><rect x="-2" y="-18" width="8" height="20" rx="3"/><rect x="9" y="-18" width="8" height="20" rx="3"/><rect x="20" y="-18" width="8" height="20" rx="3"/><rect x="31" y="-18" width="8" height="20" rx="3"/><rect x="42" y="-18" width="8" height="20" rx="3"/></g>
    </g>
-   <g class="foam" fill="#ffffff"><circle cx="150" cy="-12" r="5"/><circle cx="140" cy="-6" r="3.5"/><circle cx="160" cy="-2" r="3"/></g>
+   <g class="foam" fill="#ffffff"><circle cx="318" cy="-26" r="10"/><circle cx="298" cy="-12" r="7"/><circle cx="340" cy="-6" r="6"/></g>
   </g>
   <!-- brillos del final -->
   <g class="sparkles" fill="#ffffff">
-   <path d="M150 34l4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/>
-   <path d="M44 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/>
-   <path d="M170 100l2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/>
+   <path d="M352 60l8 20 20 8-20 8-8 20-8-20-20-8 20-8Z"/>
+   <path d="M60 180l6 14 14 6-14 6-6 14-6-14-14-6 14-6Z"/>
+   <path d="M396 250l5 11 11 5-11 5-5 11-5-11-11-5 11-5Z"/>
   </g>
  </svg>
  <p class="journey-caption"><span id="journey-label">Empezamos el control</span></p>
