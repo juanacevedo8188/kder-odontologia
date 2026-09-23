@@ -26,6 +26,12 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 - `dist/fonts/`: tipografías propias (Fraunces, Bricolage Grotesque, Newsreader y Onest, licencia SIL OFL). La barra de propuesta tiene selectores de tipografía (A/B/C) y de paleta (menta, océano, lavanda, salvia) para comparar; al elegir la definitiva, quitar el selector y las fuentes que no se usen.
 - Leaflet incluido en `dist` (licencia en `leaflet-LICENSE.txt`).
 
+## Material para compartir
+
+- `material/kder-recorrido.mp4`: video vertical de ~50 s recorriendo el sitio (paletas, secciones, asistente de turnos) para mandar por WhatsApp.
+- `dist/og-image.jpg`: vista previa del link (1200×630). Las etiquetas `og:` en `index.html` apuntan a `https://kder-odontologia.vercel.app`; si el dominio es otro, actualizar `og:url`, `og:image` y `twitter:image`.
+- Sección de reseñas (`#resenas`): los botones abren Google Maps. Para la versión final, reemplazarlos por el enlace “Pedir reseñas” del Perfil de Empresa de Google de cada sede.
+
 ## Datos a confirmar con el consultorio
 
 Tomados de directorios públicos, no verificados con Kder:
