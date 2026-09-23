@@ -201,21 +201,20 @@ h3{font-size:21px;line-height:1.25;margin:16px 0 10px}
 .proposalgrid li{margin:6px 0}
 
 /* Cierre */
-.smile-finale{position:relative;height:260vh;background:radial-gradient(circle at 50% 40%,#127a76 0,#0a4b4b 40%,#062a2c 75%,#041d1f 100%);color:#fff;text-align:center}
-.finale-sticky::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 30vmin 46vmin at var(--spot-x,50%) var(--spot-y,42%),transparent 0,transparent 55%,#041d1fd9 100%);opacity:var(--spot,1)}
-.finale-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
-/* --focus-x / --focus-y: punto donde arranca el zoom (el diente). Ajustar según la foto. */
-.smile-zoom{--focus-x:47.6%;--focus-y:52.1%;--zoom-start:6;width:min(860px,94vw);transform:scale(var(--zoom,var(--zoom-start)));transform-origin:var(--focus-x) var(--focus-y)}
-.smile-zoom:has(.smile-photo){--focus-x:55.6%;--focus-y:51.6%;--zoom-start:3.2;width:min(860px,96vw,84vh)}
-.smile-photo{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,transparent 100%)}
-.smile-zoom:has(.smile-photo) .smile-art{display:none}
-.smile-art{display:block;width:100%;height:auto;overflow:visible}
-.smile-sparkles{opacity:var(--sparkle,0)}
-.smile-sparkles path{transform-box:fill-box;transform-origin:center;animation:twinkle 2.4s ease-in-out infinite}
-.smile-sparkles path:nth-child(2){animation-delay:.8s}.smile-sparkles path:nth-child(3){animation-delay:1.6s}
-.finale-content{margin:0 auto;opacity:var(--text,0);transform:translateY(calc((1 - var(--text,0))*30px))}
+.smile-finale{position:relative;overflow:hidden;padding:26px 0;background:radial-gradient(circle at 50% 45%,#127a76 0,#0a4b4b 40%,#062a2c 75%,#041d1f 100%);color:#fff;text-align:center}
+.finale-content{padding-top:40px;padding-bottom:40px}
 .finale-content .eyebrow{color:#8fe0d7}
-.finale-content h2{font-size:clamp(30px,4vw,54px);letter-spacing:-1.6px}
+.finale-content h2{font-size:clamp(32px,4.4vw,58px);letter-spacing:-1.8px}
+.finale-molar{display:block;width:150px;height:auto;margin:0 auto 18px;overflow:visible}
+.marquee{overflow:hidden;white-space:nowrap;padding:14px 0;border-block:1px solid #ffffff1f;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:inline-flex;align-items:center;gap:28px;padding-right:28px;animation:marquee 38s linear infinite}
+.marquee.reverse .marquee-track{animation-direction:reverse}
+.marquee span{font-size:clamp(22px,3vw,40px);font-weight:800;letter-spacing:-.5px;color:#e6fffb}
+.marquee.reverse span{color:transparent;-webkit-text-stroke:1.2px #8ff0e3}
+.marquee i{font-style:normal;color:#5fe0d2;font-size:18px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.will-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) calc(var(--i,0)*90ms),transform .7s cubic-bezier(.2,.7,.2,1) calc(var(--i,0)*90ms)}
+.will-reveal.in{opacity:1;transform:none}
 .finale-note{font-size:12px;color:#9fbcbc;margin:26px 0 0}
 .site-footer{background:#0a2629;color:#cfe3e3;font-size:14px}
 .site-footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:30px;padding-bottom:30px;flex-wrap:wrap}
@@ -325,10 +324,5 @@ h3{font-size:21px;line-height:1.25;margin:16px 0 10px}
  .bubbles,.sweep,.orbit-dots{display:none}
  .stage-tilt{transform:none}
  .journey-brush{display:none}
- .smile-finale{height:auto}
- .finale-sticky{position:static;height:auto;padding:90px 0}
- .smile-zoom{transform:none}
- .finale-content{opacity:1;transform:none}
- .smile-sparkles{opacity:1}
- .finale-sticky::after{display:none}
+ .marquee-track{animation:none}
 }

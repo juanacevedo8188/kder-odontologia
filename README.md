@@ -20,6 +20,7 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 - `dist/style.css`: estilos y diseño adaptable.
 - `dist/app.js`: mapa de sedes (`sedes`), consulta de obra social y formulario de turno.
 - `dist/journey.js`: animación del diente con el scroll.
+- `dist/motion.js`: aparición de bloques al scrollear y cintas del cierre que se aceleran con el scroll.
 - `dist/bot.js`: asistente de turnos; las preguntas se editan en `BOT_CONFIG.steps`.
 - Leaflet incluido en `dist` (licencia en `leaflet-LICENSE.txt`).
 
@@ -31,7 +32,5 @@ Tomados de directorios públicos, no verificados con Kder:
 - Sedes: Centro 9 de Julio 1161 (tel. 440-9138 / 448-2955), Sur Av. del Rosario 1138 (463-7430), Norte Av. Alberdi 266 (438-4539). Coordenadas del mapa aproximadas; “Cómo llegar” busca la dirección en Google Maps.
 - Tratamientos: odontología general, endodoncia, odontopediatría, prótesis y ortodoncia.
 - Faltan horarios, lista de obras sociales, fotos y profesionales.
-
-La foto del cierre (`dist/sonrisa.jpg`) es de stock: confirmar la licencia (Pexels/Unsplash) antes de publicar. Para cambiarla, reemplazar el archivo y ajustar `--focus-x`, `--focus-y` y `--zoom-start` en `style.css`.
 
 Se mantiene `noindex` mientras sea una propuesta. Las ilustraciones son conceptuales.
