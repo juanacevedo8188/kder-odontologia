@@ -131,7 +131,8 @@ h3{font-size:21px;line-height:1.25;margin:16px 0 10px}
 .services-grid article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;transition:transform .25s,box-shadow .25s}
 .services-grid article:hover{transform:translateY(-4px);box-shadow:0 24px 40px -30px var(--shadow)}
 .services-grid p{color:var(--muted);margin:0}
-.service-icon{display:block;width:52px;height:52px;margin-top:14px;fill:none;stroke:var(--teal);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-icon{display:block;box-sizing:border-box;width:52px;height:52px;margin-top:14px;padding:12px;border-radius:14px;background:var(--soft);fill:none;stroke:var(--teal);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;overflow:visible;transition:transform .3s}
+.services-grid article:hover .service-icon{transform:translateY(-3px) rotate(-4deg)}
 .services-grid .service-cta{background:var(--teal);color:#fff;border-color:var(--teal)}
 .service-cta .number{color:var(--accent-hi)}
 .services-grid .service-cta p{color:var(--on-deep);margin-bottom:20px}
