@@ -14,14 +14,15 @@
   const zoomOut=ease(clamp(progress/.7));
   section.style.setProperty('--zoom',(ZOOM-(ZOOM-1)*zoomOut).toFixed(3));
   // El foco se centra en el diente donde arranca el zoom (mismo punto que transform-origin).
-  section.style.setProperty('--spot-x',`${zoom.offsetLeft+zoom.offsetWidth*.476}px`);
-  section.style.setProperty('--spot-y',`${zoom.offsetTop+zoom.offsetHeight*.521}px`);
+  const style=getComputedStyle(zoom),fx=parseFloat(style.getPropertyValue('--focus-x'))/100,fy=parseFloat(style.getPropertyValue('--focus-y'))/100;
+  section.style.setProperty('--spot-x',`${zoom.offsetLeft+zoom.offsetWidth*fx}px`);
+  section.style.setProperty('--spot-y',`${zoom.offsetTop+zoom.offsetHeight*fy}px`);
   section.style.setProperty('--spot',(1-zoomOut).toFixed(3));
   section.style.setProperty('--sparkle',clamp((progress-.6)/.2).toFixed(2));
   section.style.setProperty('--text',clamp((progress-.65)/.25).toFixed(2));
  }
  function schedule(){if(!scheduled){scheduled=true;window.requestAnimationFrame(draw);}}
  window.addEventListener('scroll',schedule,{passive:true});
- window.addEventListener('resize',schedule);reduce.addEventListener('change',schedule);
+ window.addEventListener('resize',schedule);window.addEventListener('load',schedule);reduce.addEventListener('change',schedule);
  draw();
 })();
