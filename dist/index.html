@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0e7c7b">
+<title>KDER · Odontología en Rosario | Propuesta</title>
+<meta name="description" content="Propuesta de sitio web para Kder Odontología, Rosario. Demo conceptual.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Recorrido del scroll: un cepillo baja por el diente y lo va dejando limpio. -->
+<div class="smile-journey" aria-hidden="true">
+ <div class="journey-glow"></div>
+ <svg class="journey-tooth" viewBox="0 0 200 380" preserveAspectRatio="xMidYMid meet">
+  <defs>
+   <linearGradient id="enamel" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f1fbfa"/><stop offset="1" stop-color="#cdebe8"/></linearGradient>
+   <linearGradient id="stained" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#efe2bd"/><stop offset="1" stop-color="#dcc99a"/></linearGradient>
+   <linearGradient id="gum" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f7b9c0"/><stop offset="1" stop-color="#f6d6d9" stop-opacity="0"/></linearGradient>
+   <clipPath id="clean-clip"><rect id="clean-rect" x="0" y="0" width="200" height="0"/></clipPath>
+   <path id="tooth-shape" d="M42 70C38 26 70 12 88 26c7 6 17 6 24 0 18-14 50 0 46 44-3 34-13 58-17 88-6 50-8 110-18 170-4 22-22 22-24 0l-6-92-6 92c-2 22-20 22-24 0-10-60-12-120-18-170-4-30-14-54-17-88Z"/>
+  </defs>
+  <path class="gum" d="M22 172c0-22 22-30 40-24 14 5 24 12 38 12s24-7 38-12c18-6 40 2 40 24v110c0 34-34 56-78 56s-78-22-78-56Z" fill="url(#gum)"/>
+  <!-- diente con sarro -->
+  <use href="#tooth-shape" fill="url(#stained)" stroke="#c9b37a" stroke-width="2"/>
+  <g class="plaque" fill="#c7ab62" opacity=".55">
+   <ellipse cx="72" cy="58" rx="12" ry="7"/><ellipse cx="128" cy="44" rx="9" ry="6"/><ellipse cx="104" cy="110" rx="15" ry="8"/><ellipse cx="66" cy="136" rx="8" ry="10"/><ellipse cx="138" cy="128" rx="10" ry="7"/><ellipse cx="82" cy="220" rx="6" ry="14"/><ellipse cx="122" cy="250" rx="6" ry="12"/>
+  </g>
+  <!-- diente limpio: se revela con el scroll -->
+  <g clip-path="url(#clean-clip)">
+   <use href="#tooth-shape" fill="url(#enamel)" stroke="#8fd1cb" stroke-width="2"/>
+   <path d="M68 62c0-14 8-22 17-20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".95"/>
+   <path d="M68 94c-1 10 0 20 3 28" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  </g>
+  <!-- cepillo -->
+  <g id="journey-brush" class="journey-brush">
+   <rect x="-6" y="-7" width="212" height="3" rx="1.5" class="brush-line"/>
+   <g transform="translate(150 -26)">
+    <rect x="0" y="12" width="56" height="12" rx="6" fill="#0e7c7b"/>
+    <rect x="-4" y="0" width="30" height="14" rx="4" fill="#15a3a0"/>
+    <g fill="#ffffff" stroke="#9fdcd8" stroke-width=".8"><rect x="-2" y="-8" width="4" height="9" rx="1.5"/><rect x="4" y="-8" width="4" height="9" rx="1.5"/><rect x="10" y="-8" width="4" height="9" rx="1.5"/><rect x="16" y="-8" width="4" height="9" rx="1.5"/><rect x="22" y="-8" width="4" height="9" rx="1.5"/></g>
+   </g>
+   <g class="foam" fill="#ffffff"><circle cx="150" cy="-12" r="5"/><circle cx="140" cy="-6" r="3.5"/><circle cx="160" cy="-2" r="3"/></g>
+  </g>
+  <!-- brillos del final -->
+  <g class="sparkles" fill="#ffffff">
+   <path d="M150 34l4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/>
+   <path d="M44 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/>
+   <path d="M170 100l2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/>
+  </g>
+ </svg>
+ <p class="journey-caption"><span id="journey-label">Empezamos el control</span></p>
+</div>
+
+<div class="demo">PROPUESTA VISUAL <span>Contenido a confirmar con el consultorio</span> <a href="#propuesta">Ver alcance</a></div>
+
+<header class="wrap site-header">
+ <a class="brand" href="#inicio" aria-label="Kder Odontología, inicio">
+  <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0e7c7b"/><path d="M18 24c-1-10 7-13 12-9 1 1 3 1 4 0 5-4 13-1 12 9-1 7-3 11-4 17-1 8-2 13-4 13s-3-6-4-12c0-2-1-3-2-3s-2 1-2 3c-1 6-2 12-4 12s-3-5-4-13c-1-6-3-10-4-17Z" fill="#fff"/></svg>
+  <span>KDER<small>ODONTOLOGÍA</small></span>
+ </a>
+ <nav aria-label="Principal">
+  <a href="#nosotros">Nosotros</a>
+  <a href="#tratamientos">Tratamientos</a>
+  <a href="#sedes">Sedes</a>
+  <a href="#cobertura">Cobertura</a>
+  <a class="button small" href="https://wa.me/5493416121290" target="_blank" rel="noopener noreferrer">Pedir turno ↗</a>
+ </nav>
+</header>
+
+<main class="site-main">
+<section id="inicio" class="hero wrap">
+ <div>
+  <p class="eyebrow">CENTRO INTEGRAL ODONTOLÓGICO · ROSARIO</p>
+  <h1>Tu sonrisa,<br>en buenas<br><em>manos.</em></h1>
+  <p class="intro">Odontología integral para toda la familia, en tres sedes de Rosario. Atendemos Previnca Salud, obras sociales y pacientes particulares.</p>
+  <div class="actions">
+   <a class="button" href="https://wa.me/5493416121290?text=Hola%2C%20Kder.%20Quisiera%20pedir%20un%20turno." target="_blank" rel="noopener noreferrer">Pedir turno por WhatsApp ↗</a>
+   <a class="textlink" href="#tratamientos">Ver tratamientos ↓</a>
+  </div>
+ </div>
+ <figure class="hero-art">
+  <svg viewBox="0 0 520 480" role="img" aria-label="Ilustración de un diente limpio y brillante">
+   <defs>
+    <radialGradient id="hero-bg" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#d9f4f1"/><stop offset=".6" stop-color="#9edfd9"/><stop offset="1" stop-color="#1aa39f"/></radialGradient>
+    <linearGradient id="hero-enamel" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f3fbfa"/><stop offset="1" stop-color="#c7e8e4"/></linearGradient>
+    <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0b4f4f" flood-opacity=".28"/></filter>
+   </defs>
+   <path d="M88 60h344c40 0 60 20 60 60v300c0 30-20 50-50 50H138C96 470 28 430 28 360V120c0-40 20-60 60-60Z" fill="url(#hero-bg)"/>
+   <circle cx="260" cy="250" r="172" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="4 10"/>
+   <circle cx="260" cy="250" r="128" fill="#ffffff" fill-opacity=".22"/>
+   <g filter="url(#soft-shadow)" transform="translate(166 110) scale(.94)">
+    <path d="M42 70C38 26 70 12 88 26c7 6 17 6 24 0 18-14 50 0 46 44-3 34-13 58-17 88-6 50-8 110-18 170-4 22-22 22-24 0l-6-92-6 92c-2 22-20 22-24 0-10-60-12-120-18-170-4-30-14-54-17-88Z" transform="scale(1.02)" fill="url(#hero-enamel)" stroke="#8fd1cb" stroke-width="2.5"/>
+    <path d="M70 62c0-14 8-22 17-20" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+    <path d="M70 94c-1 10 0 20 3 28" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+   </g>
+   <g fill="#ffffff" class="hero-sparkles">
+    <path d="M392 120l7 17 17 7-17 7-7 17-7-17-17-7 17-7Z"/>
+    <path d="M128 206l5 11 11 5-11 5-5 11-5-11-11-5 11-5Z"/>
+    <path d="M404 330l4 9 9 4-9 4-4 9-4-9-9-4 9-4Z"/>
+   </g>
+  </svg>
+  <span class="chip chip-a">✓ Previnca Salud</span>
+  <span class="chip chip-b">3 sedes en Rosario</span>
+  <span class="chip chip-c">Para toda la familia</span>
+  <figcaption>Ilustración conceptual. La versión final puede sumar fotos reales del consultorio.</figcaption>
+ </figure>
+</section>
+
+<div class="ribbon"><div class="wrap">Tres sedes en Rosario. <span>Centro · Sur · Norte · Previnca Salud, obras sociales y particulares</span></div></div>
+
+<section class="wrap section about" id="nosotros">
+ <div class="about-cards">
+  <article><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6Z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Prevención primero</h3><p>Controles periódicos para cuidar tu boca antes de que aparezca el problema.</p></article>
+  <article><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="10" r="2.3"/><path d="M3 20c0-3 2-6 5-6s5 3 5 6M14 20c0-2 1-5 3-5s4 3 4 5"/></svg></span><h3>Toda la familia</h3><p>Atención para adultos y odontopediatría para los más chicos.</p></article>
+  <article><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6-6-6-11a6 6 0 0 1 12 0c0 5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg></span><h3>Cerca tuyo</h3><p>Sedes en el centro, el sur y el norte de la ciudad.</p></article>
+ </div>
+ <div>
+  <p class="eyebrow">QUIÉNES SOMOS</p>
+  <h2>Un centro integral,<br>pensado para vos.</h2>
+  <p class="intro">Somos Kder, un centro odontológico integral de Rosario.</p>
+  <p>Resolvemos en un mismo lugar desde el control de rutina hasta tratamientos de conducto, prótesis y ortodoncia, con atención para adultos y niños.</p>
+  <p>Trabajamos con Previnca Salud, obras sociales y pacientes particulares, para que la cobertura no sea un obstáculo a la hora de cuidar tu sonrisa.</p>
+  <a class="textlink" href="https://wa.me/5493416121290" target="_blank" rel="noopener noreferrer">Escribinos y coordinamos tu turno ↗</a>
+ </div>
+</section>
+
+<section class="wrap section" id="tratamientos">
+ <div class="sectionhead">
+  <div><p class="eyebrow">QUÉ HACEMOS</p><h2>Tratamientos para<br>cada etapa.</h2></div>
+  <p>Una primera consulta permite evaluar tu caso y definir el tratamiento. Los tratamientos listados deben confirmarse con el consultorio.</p>
+ </div>
+ <div class="services-grid">
+  <article><span class="number">01</span><svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 16c-1-8 6-10 10-7 1 1 3 1 4 0 4-3 11-1 10 7-1 6-3 9-4 14-1 7-2 11-4 11s-3-5-3-10c0-2-1-3-2-3s-2 1-2 3c0 5-1 10-3 10s-3-4-4-11c-1-5-3-8-4-14Z"/></svg><h3>Odontología general</h3><p>Consultas, controles, arreglos de caries y limpiezas para mantener la boca sana.</p></article>
+  <article><span class="number">02</span><svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 16c-1-8 6-10 10-7 1 1 3 1 4 0 4-3 11-1 10 7-1 6-3 9-4 14-1 7-2 11-4 11s-3-5-3-10c0-2-1-3-2-3s-2 1-2 3c0 5-1 10-3 10s-3-4-4-11c-1-5-3-8-4-14Z"/><path d="M24 14v10M21 33l3-9 3 9"/></svg><h3>Endodoncia</h3><p>Tratamientos de conducto para conservar piezas dentarias dañadas o con dolor.</p></article>
+  <article><span class="number">03</span><svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="18" r="8"/><path d="M20 17h.1M28 17h.1M20 21c2 2 6 2 8 0M12 42c1-8 6-12 12-12s11 4 12 12"/></svg><h3>Odontopediatría</h3><p>Atención pensada para chicos, con un trato cercano desde la primera visita.</p></article>
+  <article><span class="number">04</span><svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 20c4-6 28-6 32 0M10 20v6c0 4 3 6 6 6h16c3 0 6-2 6-6v-6"/><path d="M16 20v12M24 20v12M32 20v12"/></svg><h3>Prótesis</h3><p>Soluciones para reponer piezas y recuperar la función y la estética de tu sonrisa.</p></article>
+  <article><span class="number">05</span><svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h36"/><rect x="9" y="19" width="7" height="10" rx="2"/><rect x="20.5" y="19" width="7" height="10" rx="2"/><rect x="32" y="19" width="7" height="10" rx="2"/></svg><h3>Ortodoncia</h3><p>Corrección de la posición de los dientes y de la mordida, en chicos y adultos.</p></article>
+  <article class="service-cta"><span class="number">06</span><h3>¿No sabés qué necesitás?</h3><p>Contanos qué te pasa y te orientamos para sacar el turno indicado.</p><a class="button small" href="https://wa.me/5493416121290?text=Hola%2C%20Kder.%20Quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">Consultar ↗</a></article>
+ </div>
+</section>
+
+<section class="soft-band" id="sedes">
+ <div class="wrap section">
+  <div class="sectionhead">
+   <div><p class="eyebrow">DÓNDE ATENDEMOS</p><h2>Tres sedes en Rosario.</h2></div>
+   <p>Elegí la sede más cómoda para vos. Los puntos del mapa son aproximados; usá “Cómo llegar” para abrir la dirección exacta.</p>
+  </div>
+  <div class="sedes-grid">
+   <div>
+    <div id="real-map" class="sedes-map" aria-label="Mapa de las sedes de Kder en Rosario"></div>
+    <p id="map-error" hidden role="status">No se pudo cargar el mapa. Podés elegir la sede con los botones.</p>
+    <div class="map-options" aria-label="Elegir sede">
+     <button type="button" data-sede="centro" aria-pressed="true">Centro</button>
+     <button type="button" data-sede="sur" aria-pressed="false">Sur</button>
+     <button type="button" data-sede="norte" aria-pressed="false">Norte</button>
+    </div>
+   </div>
+   <article class="sede-card" aria-live="polite" aria-atomic="true">
+    <span class="number">SEDE <span id="sede-tag">CENTRO</span></span>
+    <h3 id="sede-name">Kder Centro</h3>
+    <p class="sede-address" id="sede-address">9 de Julio 1161, Rosario</p>
+    <dl>
+     <div><dt>Teléfono</dt><dd id="sede-phone">(0341) 440-9138 · 448-2955</dd></div>
+     <div><dt>Horarios</dt><dd>A confirmar con el consultorio</dd></div>
+    </dl>
+    <div class="sede-actions">
+     <a id="sede-turno" class="button small" href="https://wa.me/5493416121290" target="_blank" rel="noopener noreferrer">Pedir turno en esta sede ↗</a>
+     <a id="sede-maps" class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=9+de+Julio+1161+Rosario" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="wrap section" id="cobertura">
+ <div class="sectionhead">
+  <div><p class="eyebrow">COBERTURA</p><h2>Atendemos con tu<br>cobertura o particular.</h2></div>
+  <p>Consultá antes de tu turno si tu plan u obra social está incluido y qué necesitás llevar.</p>
+ </div>
+ <div class="coverage-grid">
+  <article class="featured"><span class="number">PREVINCA SALUD</span><h3>Pacientes Previnca</h3><p>Kder figura como prestador odontológico de Previnca Salud en Rosario.</p></article>
+  <article><span class="number">OBRAS SOCIALES</span><h3>Tu obra social</h3><p>Trabajamos con obras sociales. Escribinos para confirmar si la tuya está incluida.</p></article>
+  <article><span class="number">PARTICULARES</span><h3>Sin cobertura</h3><p>También atendemos pacientes particulares. Consultá por el tratamiento que necesitás.</p></article>
+ </div>
+ <form class="coverage-check" id="coverage-form">
+  <label for="obra-social">¿Tenés obra social? Consultá si la atendemos</label>
+  <div><input id="obra-social" maxlength="80" placeholder="Ej.: nombre de tu obra social o prepaga" required><button class="button" type="submit">Consultar por WhatsApp ↗</button></div>
+ </form>
+</section>
+
+<section class="soft-band">
+ <div class="wrap section">
+  <p class="eyebrow">DEL MENSAJE AL SILLÓN</p>
+  <h2>Sacar turno es simple.</h2>
+  <div class="steps">
+   <article><span>01</span><h3>Escribinos</h3><p>Contanos qué necesitás: un control, una molestia o un tratamiento puntual.</p></article>
+   <article><span>02</span><h3>Elegí sede y horario</h3><p>Coordinamos la sede más cómoda y un horario que te quede bien.</p></article>
+   <article><span>03</span><h3>Vení a tu consulta</h3><p>Traé tu credencial si tenés cobertura. En la consulta evaluamos tu caso.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="wrap section faq" id="preguntas">
+ <p class="eyebrow">PREGUNTAS FRECUENTES</p>
+ <h2>Lo que más nos consultan.</h2>
+ <details><summary>¿Atienden a chicos?</summary><p>Sí. El consultorio ofrece odontopediatría. Consultá la sede y los días de atención.</p></details>
+ <details><summary>¿Qué obras sociales aceptan?</summary><p>Atendemos Previnca Salud y otras obras sociales. La lista definitiva debe confirmarla el consultorio; mientras tanto, podés consultar la tuya por WhatsApp.</p></details>
+ <details><summary>Tengo dolor, ¿me pueden atender pronto?</summary><p>Escribinos por WhatsApp contando qué te pasa y te indicamos el primer turno disponible.</p></details>
+ <details><summary>¿Cuánto cuesta una consulta?</summary><p>Esta propuesta no incluye precios. Los valores y coberturas se informan en cada consulta.</p></details>
+</section>
+
+<section id="turno" class="contact">
+ <div class="wrap contactgrid">
+  <div>
+   <p class="eyebrow">PEDÍ TU TURNO</p>
+   <h2>Tu próxima<br>consulta empieza acá.</h2>
+   <p>Completá los datos y prepará tu mensaje para WhatsApp.</p>
+   <p class="contactnote">Revisá tu mensaje y abrilo en WhatsApp. El envío se confirma desde la aplicación; el sitio no guarda tus datos.</p>
+   <p><a class="button light" href="https://wa.me/5493416121290" target="_blank" rel="noopener noreferrer">WhatsApp: 341 612-1290 ↗</a></p>
+  </div>
+  <form id="form">
+   <label for="nombre">Nombre</label>
+   <input id="nombre" required maxlength="80" placeholder="Tu nombre">
+   <label for="sede">Sede</label>
+   <select id="sede"><option>La más cercana</option><option>Centro · 9 de Julio 1161</option><option>Sur · Av. del Rosario 1138</option><option>Norte · Av. Alberdi 266</option></select>
+   <label for="cobertura-form">Cobertura</label>
+   <select id="cobertura-form"><option>Previnca Salud</option><option>Otra obra social</option><option>Particular</option></select>
+   <label for="motivo">Motivo de la consulta</label>
+   <textarea id="motivo" required maxlength="600" rows="3" placeholder="Ej.: control y limpieza, dolor en una muela, ortodoncia para mi hijo..."></textarea>
+   <button class="button" type="submit">Ver mensaje ↗</button>
+   <div id="result" hidden aria-live="polite">
+    <h3>Tu mensaje</h3>
+    <p id="message"></p>
+    <a id="send-whatsapp" class="button" href="https://wa.me/5493416121290" target="_blank" rel="noopener noreferrer">Abrir en WhatsApp ↗</a>
+    <button type="button" id="copy" class="copy">Copiar mensaje</button>
+    <p id="copy-status" role="status"></p>
+   </div>
+  </form>
+ </div>
+</section>
+
+<section class="wrap section proposal" id="propuesta">
+ <p class="eyebrow">PARA REVISAR CON KDER</p>
+ <h2>De esta idea a una web propia.</h2>
+ <p class="intro">Una primera versión enfocada en presentar el consultorio y facilitar los turnos.</p>
+ <div class="proposalgrid">
+  <article><h3>Qué incluiría</h3><ul><li>Diseño adaptado a celular y computadora</li><li>Tratamientos y sedes confirmados</li><li>Mapa con las tres sedes</li><li>Asistente que arma el pedido de turno</li><li>Contacto por WhatsApp e Instagram</li></ul></article>
+  <article><h3>Qué necesitamos</h3><ul><li>Fotos del consultorio y del equipo, con permiso</li><li>Horarios de cada sede</li><li>Lista de obras sociales</li><li>Profesionales y matrículas, si se quieren mostrar</li><li>Confirmar teléfonos y WhatsApp</li></ul></article>
+  <article><h3>Qué definimos después</h3><ul><li>Alcance final y presupuesto de la web</li><li>Dominio y alojamiento</li><li>Plazo de entrega</li><li>Responsable de las actualizaciones</li><li>Mantenimiento y costos recurrentes</li></ul></article>
+ </div>
+</section>
+
+<section class="smile-finale" id="final">
+ <div class="wrap finale-content">
+  <p class="eyebrow">EL RECORRIDO TERMINA ACÁ</p>
+  <h2>Una sonrisa sana<br>empieza con una consulta.</h2>
+  <a class="button light" href="https://wa.me/5493416121290?text=Hola%2C%20Kder.%20Quisiera%20pedir%20un%20turno." target="_blank" rel="noopener noreferrer">Pedir mi turno ↗</a>
+  <p class="finale-note">Animación ilustrativa. No representa un tratamiento ni un resultado clínico.</p>
+ </div>
+</section>
+</main>
+
+<footer class="site-footer">
+ <div class="wrap">
+  <a class="brand" href="#inicio" aria-label="Kder Odontología, inicio">
+   <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#ffffff"/><path d="M18 24c-1-10 7-13 12-9 1 1 3 1 4 0 5-4 13-1 12 9-1 7-3 11-4 17-1 8-2 13-4 13s-3-6-4-12c0-2-1-3-2-3s-2 1-2 3c-1 6-2 12-4 12s-3-5-4-13c-1-6-3-10-4-17Z" fill="#0e7c7b"/></svg>
+   <span>KDER<small>ODONTOLOGÍA</small></span>
+  </a>
+  <a href="https://www.instagram.com/consultorio_odontologico_kder/" target="_blank" rel="noopener noreferrer">@consultorio_odontologico_kder ↗</a>
+  <p>Boceto conceptual · No es el sitio oficial del consultorio.</p>
+ </div>
+</footer>
+
+<script src="leaflet.js"></script>
+<script src="app.js"></script>
+<script src="journey.js"></script>
+<script src="bot.js"></script>
+</body>
+</html>
