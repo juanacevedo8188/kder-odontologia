@@ -94,3 +94,19 @@ document.querySelector('#copy').addEventListener('click',async()=>{
  apply(saved);
  buttons.forEach(button=>button.addEventListener('click',()=>apply(button.dataset.fontSet)));
 })();
+
+// Selector de paleta de la propuesta: menta · océano · lavanda · salvia.
+(()=>{
+ const buttons=document.querySelectorAll('[data-palette-set]');
+ const theme=document.querySelector('meta[name="theme-color"]');
+ function apply(set){
+  document.documentElement.dataset.palette=set;
+  buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.paletteSet===set)));
+  if(theme){theme.content=getComputedStyle(document.documentElement).getPropertyValue('--brand').trim();}
+  try{localStorage.setItem('kder-palette',set);}catch{}
+ }
+ let saved='menta';
+ try{saved=localStorage.getItem('kder-palette')||'menta';}catch{}
+ apply(saved);
+ buttons.forEach(button=>button.addEventListener('click',()=>apply(button.dataset.paletteSet)));
+})();

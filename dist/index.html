@@ -42,14 +42,14 @@
    <g clip-path="url(#j-clip)">
     <rect width="440" height="540" fill="url(#j-clean)"/>
     <use href="#j-molar" fill="none" stroke="#9b8864" stroke-width="26" opacity=".35" filter="url(#j-b10)"/>
-    <use href="#j-molar" fill="none" stroke="#7fe8dc" stroke-width="10" opacity=".6" filter="url(#j-b4)" transform="translate(-8 2)"/>
+    <use href="#j-molar" fill="none" style="stroke:var(--accent)" stroke-width="10" opacity=".6" filter="url(#j-b4)" transform="translate(-8 2)"/>
     <g fill="#fff" filter="url(#j-b4)">
      <ellipse cx="146" cy="100" rx="24" ry="10" transform="rotate(-22 146 100)"/>
      <ellipse cx="236" cy="88" rx="20" ry="8"/>
      <ellipse cx="128" cy="186" rx="9" ry="56" opacity=".85" transform="rotate(-6 128 186)"/>
     </g>
    </g>
-   <use href="#j-molar" fill="none" stroke="#8fd1cb" stroke-width="2"/>
+   <use href="#j-molar" fill="none" style="stroke:var(--accent-hi)" stroke-width="2"/>
   </g>
   <!-- encía: abraza el cuello y se desvanece hacia abajo y a los costados -->
   <path class="gum" mask="url(#j-gum-mask)" d="M24 258c30-24 62-20 84-12 18 7 30 10 44 10 22 0 44-8 68-8s46 8 68 8c14 0 26-3 44-10 22-8 54-12 84 12v230H24Z" fill="url(#j-gum)"/>
@@ -58,9 +58,9 @@
   <g id="journey-brush" class="journey-brush">
    <rect x="30" y="-3" width="380" height="5" rx="2.5" class="brush-line"/>
    <g transform="translate(318 -48)">
-    <rect x="30" y="26" width="110" height="22" rx="11" fill="#0e7c7b"/>
-    <rect x="-6" y="0" width="62" height="30" rx="9" fill="#15a3a0"/>
-    <g fill="#ffffff" stroke="#9fdcd8" stroke-width="1.5"><rect x="-2" y="-18" width="8" height="20" rx="3"/><rect x="9" y="-18" width="8" height="20" rx="3"/><rect x="20" y="-18" width="8" height="20" rx="3"/><rect x="31" y="-18" width="8" height="20" rx="3"/><rect x="42" y="-18" width="8" height="20" rx="3"/></g>
+    <rect x="30" y="26" width="110" height="22" rx="11" style="fill:var(--brand)"/>
+    <rect x="-6" y="0" width="62" height="30" rx="9" style="fill:var(--brand-light)"/>
+    <g fill="#ffffff" style="stroke:var(--accent-hi)" stroke-width="1.5"><rect x="-2" y="-18" width="8" height="20" rx="3"/><rect x="9" y="-18" width="8" height="20" rx="3"/><rect x="20" y="-18" width="8" height="20" rx="3"/><rect x="31" y="-18" width="8" height="20" rx="3"/><rect x="42" y="-18" width="8" height="20" rx="3"/></g>
    </g>
    <g class="foam" fill="#ffffff"><circle cx="318" cy="-26" r="10"/><circle cx="298" cy="-12" r="7"/><circle cx="340" cy="-6" r="6"/></g>
   </g>
@@ -81,12 +81,13 @@
  </div>
 
 <div class="demo">PROPUESTA VISUAL <span>Contenido a confirmar con el consultorio</span> <a href="#propuesta">Ver alcance</a>
+ <div class="palette-switch" role="group" aria-label="Probar paleta">Paleta: <button type="button" data-palette-set="menta" aria-pressed="true" title="Menta" aria-label="Menta" style="--sw-a:#0e7c7b;--sw-b:#5fe0d2"></button><button type="button" data-palette-set="oceano" aria-pressed="false" title="Océano" aria-label="Océano" style="--sw-a:#1d5fa8;--sw-b:#7cc7ff"></button><button type="button" data-palette-set="lavanda" aria-pressed="false" title="Lavanda" aria-label="Lavanda" style="--sw-a:#6a4fb8;--sw-b:#c4b2ff"></button><button type="button" data-palette-set="salvia" aria-pressed="false" title="Salvia" aria-label="Salvia" style="--sw-a:#4e7a5e;--sw-b:#c9e4a8"></button></div>
  <div class="font-switch" role="group" aria-label="Probar tipografía">Tipografía: <button type="button" data-font-set="a" aria-pressed="true">A</button><button type="button" data-font-set="b" aria-pressed="false">B</button><button type="button" data-font-set="c" aria-pressed="false">C</button></div>
 </div>
 
 <header class="wrap site-header">
  <a class="brand" href="#inicio" aria-label="Kder Odontología, inicio">
-  <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#5fe0d2"/><path d="M18 24c-1-10 7-13 12-9 1 1 3 1 4 0 5-4 13-1 12 9-1 7-3 11-4 17-1 8-2 13-4 13s-3-6-4-12c0-2-1-3-2-3s-2 1-2 3c-1 6-2 12-4 12s-3-5-4-13c-1-6-3-10-4-17Z" fill="#062a2c"/></svg>
+  <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" style="fill:var(--accent)"/><path d="M18 24c-1-10 7-13 12-9 1 1 3 1 4 0 5-4 13-1 12 9-1 7-3 11-4 17-1 8-2 13-4 13s-3-6-4-12c0-2-1-3-2-3s-2 1-2 3c-1 6-2 12-4 12s-3-5-4-13c-1-6-3-10-4-17Z" style="fill:var(--deep-3)"/></svg>
   <span>KDER<small>ODONTOLOGÍA</small></span>
  </a>
  <nav aria-label="Principal">
@@ -123,7 +124,7 @@
      <linearGradient id="m-side" x1="0" x2="1"><stop offset="0" stop-color="#d4c9b4"/><stop offset=".2" stop-color="#f3eee3"/><stop offset=".44" stop-color="#fffefb"/><stop offset=".7" stop-color="#f1ebdf"/><stop offset="1" stop-color="#c9bca4"/></linearGradient>
      <linearGradient id="m-root" x1="0" x2="0" y1="0" y2="1"><stop offset=".44" stop-color="#e6d8bd" stop-opacity="0"/><stop offset=".66" stop-color="#e2d2b3" stop-opacity=".5"/><stop offset="1" stop-color="#c7b18a" stop-opacity=".9"/></linearGradient>
      <radialGradient id="m-top" cx=".4" cy=".2" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-     <radialGradient id="halo" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#5fe0d2" stop-opacity=".55"/><stop offset=".55" stop-color="#1aa39f" stop-opacity=".18"/><stop offset="1" stop-color="#1aa39f" stop-opacity="0"/></radialGradient>
+     <radialGradient id="halo" cx=".5" cy=".45" r=".5"><stop offset="0" style="stop-color:var(--accent)" stop-opacity=".55"/><stop offset=".55" style="stop-color:var(--brand-light)" stop-opacity=".18"/><stop offset="1" style="stop-color:var(--brand-light)" stop-opacity="0"/></radialGradient>
      <linearGradient id="sweep" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
      <filter id="b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
      <filter id="b6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
@@ -131,7 +132,7 @@
      <clipPath id="front-half"><rect x="0" y="262" width="440" height="200"/></clipPath>
     </defs>
     <circle class="halo" cx="220" cy="240" r="215" fill="url(#halo)"/>
-    <g transform="rotate(-10 220 262)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" stroke="#9ff0e6" stroke-opacity=".28" stroke-width="1.5"/></g>
+    <g transform="rotate(-10 220 262)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" style="stroke:var(--accent-hi)" stroke-opacity=".28" stroke-width="1.5"/></g>
     <ellipse class="floor-shadow" cx="220" cy="506" rx="118" ry="15" fill="#011414" opacity=".6" filter="url(#b12)"/>
     <g class="molar-float">
      <g clip-path="url(#molar-clip)">
@@ -141,7 +142,7 @@
       <g fill="#7d6a4b" filter="url(#b6)" opacity=".4"><ellipse cx="192" cy="104" rx="14" ry="26"/><ellipse cx="278" cy="102" rx="14" ry="26"/><ellipse cx="220" cy="318" rx="30" ry="44"/></g>
       <ellipse cx="220" cy="252" rx="140" ry="7" fill="#8f7b58" opacity=".1" filter="url(#b6)"/>
       <use href="#molar" fill="none" stroke="#8a7656" stroke-width="30" opacity=".45" filter="url(#b12)"/>
-      <use href="#molar" fill="none" stroke="#7fe8dc" stroke-width="12" opacity=".75" filter="url(#b6)" transform="translate(-9 3)"/>
+      <use href="#molar" fill="none" style="stroke:var(--accent)" stroke-width="12" opacity=".75" filter="url(#b6)" transform="translate(-9 3)"/>
       <g fill="#fff" filter="url(#b3)">
        <ellipse cx="146" cy="100" rx="24" ry="10" transform="rotate(-22 146 100)"/>
        <ellipse cx="236" cy="88" rx="20" ry="8" transform="rotate(-6 236 88)"/>
@@ -155,10 +156,10 @@
      </g>
      <use href="#molar" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/>
     </g>
-    <g transform="rotate(-10 220 262)" clip-path="url(#front-half)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" stroke="#9ff0e6" stroke-opacity=".55" stroke-width="1.5"/></g>
+    <g transform="rotate(-10 220 262)" clip-path="url(#front-half)"><ellipse class="orbit" cx="220" cy="262" rx="205" ry="50" fill="none" style="stroke:var(--accent-hi)" stroke-opacity=".55" stroke-width="1.5"/></g>
     <g class="orbit-dots" transform="rotate(-10 220 262)">
-     <circle r="5" fill="#bdfcf3"><animateMotion dur="9s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
-     <circle r="3" fill="#5fe0d2"><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
+     <circle r="5" style="fill:var(--accent-hi)"><animateMotion dur="9s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
+     <circle r="3" style="fill:var(--accent)"><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M15 262a205 50 0 1 0 410 0a205 50 0 1 0-410 0"/></circle>
     </g>
     <g class="stage-sparkles" fill="#ffffff">
      <path d="M362 110l6 15 15 6-15 6-6 15-6-15-15-6 15-6Z"/>
@@ -332,7 +333,7 @@
      <rect width="440" height="540" fill="url(#m-side)"/>
      <rect width="440" height="540" fill="url(#m-root)"/>
      <ellipse cx="190" cy="130" rx="160" ry="120" fill="url(#m-top)"/>
-     <use href="#molar" fill="none" stroke="#7fe8dc" stroke-width="12" opacity=".75" filter="url(#b6)" transform="translate(-9 3)"/>
+     <use href="#molar" fill="none" style="stroke:var(--accent)" stroke-width="12" opacity=".75" filter="url(#b6)" transform="translate(-9 3)"/>
      <g fill="#fff" filter="url(#b3)"><ellipse cx="146" cy="100" rx="24" ry="10" transform="rotate(-22 146 100)"/><ellipse cx="128" cy="186" rx="9" ry="58" opacity=".85"/></g>
      <g transform="rotate(16 220 270)"><rect class="sweep" x="-200" y="-80" width="130" height="720" fill="url(#sweep)"/></g>
     </g>
@@ -350,7 +351,7 @@
 <footer class="site-footer">
  <div class="wrap">
   <a class="brand" href="#inicio" aria-label="Kder Odontología, inicio">
-   <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#ffffff"/><path d="M18 24c-1-10 7-13 12-9 1 1 3 1 4 0 5-4 13-1 12 9-1 7-3 11-4 17-1 8-2 13-4 13s-3-6-4-12c0-2-1-3-2-3s-2 1-2 3c-1 6-2 12-4 12s-3-5-4-13c-1-6-3-10-4-17Z" fill="#0e7c7b"/></svg>
+   <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#ffffff"/><path d="M18 24c-1-10 7-13 12-9 1 1 3 1 4 0 5-4 13-1 12 9-1 7-3 11-4 17-1 8-2 13-4 13s-3-6-4-12c0-2-1-3-2-3s-2 1-2 3c-1 6-2 12-4 12s-3-5-4-13c-1-6-3-10-4-17Z" style="fill:var(--brand)"/></svg>
    <span>KDER<small>ODONTOLOGÍA</small></span>
   </a>
   <a href="https://www.instagram.com/consultorio_odontologico_kder/" target="_blank" rel="noopener noreferrer">@consultorio_odontologico_kder ↗</a>
