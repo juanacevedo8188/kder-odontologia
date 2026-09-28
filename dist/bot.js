@@ -5,18 +5,19 @@
 //  - label: cómo aparece el dato en el mensaje de WhatsApp.
 const BOT_CONFIG={
  owner:'al consultorio',
- phone:'5493416121290',
+ phone:'5493416121290', // Centro (número general)
+ phoneNorte:'5493412525042',
  greeting:'¡Hola! Soy el asistente de Kder. Te hago unas preguntas rápidas y te paso por WhatsApp con el consultorio para coordinar tu turno.',
  steps:[
   {id:'motivo',label:'Motivo',type:'options',question:'¿Qué necesitás?',options:['Control y limpieza','Tengo dolor o una urgencia','Ortodoncia','Turno para mi hijo/a'],other:'Otro motivo',otherPlaceholder:'Contanos qué necesitás'},
-  {id:'sede',label:'Sede',type:'options',question:'¿En qué sede te queda mejor?',options:['Centro · 9 de Julio 1161','Sur · Av. del Rosario 1138','Norte · Av. Alberdi 266','La que tenga turno antes']},
+  {id:'sede',label:'Sede',type:'options',question:'¿En qué sede te queda mejor?',options:['Centro · 9 de Julio 1161','Norte · Av. Alberdi 266','La que tenga turno antes']},
   {id:'cobertura',label:'Cobertura',type:'options',question:'¿Con qué cobertura te atenderías?',options:['Previnca Salud','Particular'],other:'Otra obra social',otherPlaceholder:'¿Cuál es tu obra social?'},
   {id:'horario',label:'Horario preferido',type:'options',question:'¿Qué horario te conviene?',options:['Mañana','Tarde','Me da igual']},
   {id:'nombre',label:'Nombre',type:'text',question:'Por último, ¿cómo te llamás?',placeholder:'Tu nombre (opcional)',optional:true}
  ]
 };
 (()=>{
- const {owner,phone,greeting,steps}=BOT_CONFIG;
+ const {owner,phone,phoneNorte,greeting,steps}=BOT_CONFIG;
  const root=document.createElement('div');
  root.className='bot';
  root.innerHTML=`<button class="bot-launcher" type="button" aria-expanded="false" aria-controls="bot-panel"><span aria-hidden="true">🦷</span> Pedí tu turno</button>
@@ -92,7 +93,7 @@ const BOT_CONFIG={
   bubble(`¡Gracias! Este es el mensaje que le vas a mandar ${owner}. Revisalo y envialo desde WhatsApp.`,'from-bot');
   const summary=document.createElement('pre');summary.className='bot-summary';summary.textContent=buildMessage();log.appendChild(summary);log.scrollTop=log.scrollHeight;
   const link=document.createElement('a');link.className='button bot-send';link.target='_blank';link.rel='noopener noreferrer';
-  link.href=`https://wa.me/${phone}?text=${encodeURIComponent(buildMessage())}`;link.textContent='Enviar por WhatsApp ↗';
+  link.href=`https://wa.me/${(answers.sede||'').startsWith('Norte')?phoneNorte:phone}?text=${encodeURIComponent(buildMessage())}`;link.textContent='Enviar por WhatsApp ↗';
   const restart=document.createElement('button');restart.type='button';restart.className='bot-link';restart.textContent='Empezar de nuevo';restart.addEventListener('click',reset);
   input.append(toolbar(),link,restart);
  }

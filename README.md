@@ -37,8 +37,8 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 
 Tomados de directorios públicos, no verificados con Kder:
 
-- WhatsApp 341 612-1290 (`5493416121290`), usado en todos los botones.
-- Sedes: Centro 9 de Julio 1161 (tel. 440-9138 / 448-2955), Sur Av. del Rosario 1138 (463-7430), Norte Av. Alberdi 266 (438-4539). Coordenadas del mapa aproximadas; “Cómo llegar” busca la dirección en Google Maps.
+- WhatsApp por sede (del Instagram del consultorio): Centro 341 612-1290 (`5493416121290`, también número general) y Norte 341 252-5042 (`5493412525042`). Los pedidos de turno van al WhatsApp de la sede elegida.
+- Sedes (solo dos, confirmado): Centro 9 de Julio 1161 y Norte Av. Alberdi 266. Coordenadas del mapa aproximadas; “Cómo llegar” busca la dirección en Google Maps.
 - Tratamientos: odontología general, endodoncia, odontopediatría, prótesis y ortodoncia.
 - Faltan horarios, lista de obras sociales, fotos y profesionales.
 
