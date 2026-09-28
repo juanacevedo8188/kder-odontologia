@@ -4,7 +4,7 @@
 //  - other:'Texto' (solo en 'options') agrega un botón que abre un campo para escribir una respuesta propia.
 //  - label: cómo aparece el dato en el mensaje de WhatsApp.
 const BOT_CONFIG={
- owner:'el consultorio',
+ owner:'al consultorio',
  phone:'5493416121290',
  greeting:'¡Hola! Soy el asistente de Kder. Te hago unas preguntas rápidas y te paso por WhatsApp con el consultorio para coordinar tu turno.',
  steps:[
@@ -89,7 +89,7 @@ const BOT_CONFIG={
   return `Hola, Kder${name?`. Soy ${name}`:''}. Quisiera pedir un turno:\n\n${lines.join('\n')}\n\n¿Qué días tienen disponibles?`;
  }
  function finish(){
-  bubble(`¡Gracias! Este es el mensaje que le vas a mandar a ${owner}. Revisalo y envialo desde WhatsApp.`,'from-bot');
+  bubble(`¡Gracias! Este es el mensaje que le vas a mandar ${owner}. Revisalo y envialo desde WhatsApp.`,'from-bot');
   const summary=document.createElement('pre');summary.className='bot-summary';summary.textContent=buildMessage();log.appendChild(summary);log.scrollTop=log.scrollHeight;
   const link=document.createElement('a');link.className='button bot-send';link.target='_blank';link.rel='noopener noreferrer';
   link.href=`https://wa.me/${phone}?text=${encodeURIComponent(buildMessage())}`;link.textContent='Enviar por WhatsApp ↗';
