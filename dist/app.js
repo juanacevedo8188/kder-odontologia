@@ -110,3 +110,7 @@ document.querySelector('#copy').addEventListener('click',async()=>{
  apply(saved);
  buttons.forEach(button=>button.addEventListener('click',()=>apply(button.dataset.paletteSet)));
 })();
+
+// Si se llegó desde la propuesta, mostrar "← Volver a la propuesta" (los visitantes comunes no lo ven).
+try{if(new URLSearchParams(location.search).get('from')==='propuesta')sessionStorage.setItem('fromProp','1');}catch{}
+try{if(sessionStorage.getItem('fromProp'))document.querySelector('#backProp').classList.add('show');}catch{}

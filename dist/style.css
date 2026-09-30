@@ -406,3 +406,8 @@ h3{font-weight:calc(var(--display-weight) + 40)}
 @media(max-width:760px){.review-actions{grid-template-columns:1fr}.stars svg{width:30px;height:30px}}
 .contact-phones{display:flex;flex-wrap:wrap;gap:10px}
 .proposal-download{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin:30px 0 0}
+/* Botón para volver a la propuesta (solo si se llegó desde ella) */
+.backprop{position:fixed;left:16px;bottom:18px;z-index:1050;display:none;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:var(--deep-3);color:#fff;font-weight:700;font-size:.9rem;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.backprop.show{display:inline-flex}
+.backprop:hover{background:var(--brand)}
+.bot.open~.backprop{display:none}

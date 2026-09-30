@@ -106,4 +106,6 @@ const BOT_CONFIG={
  launcher.addEventListener('click',()=>toggle(panel.hidden));
  root.querySelector('.bot-close').addEventListener('click',()=>toggle(false));
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidden){toggle(false);}});
+ // Desde la propuesta (?asistente=1) el asistente se abre solo.
+ if(new URLSearchParams(location.search).get('asistente')==='1'){toggle(true);}
 })();

@@ -27,6 +27,10 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 - `dist/fonts/`: tipografías propias (Fraunces, Bricolage Grotesque, Newsreader y Onest, licencia SIL OFL). La barra de propuesta tiene selectores de tipografía (A/B/C) y de paleta (menta, océano, lavanda, salvia) para comparar; al elegir la definitiva, quitar el selector y las fuentes que no se usen.
 - Leaflet incluido en `dist` (licencia en `leaflet-LICENSE.txt`).
 
+## Propuesta para el centro
+
+`dist/propuesta.html` es la propuesta interactiva, con link propio: **https://kder-odontologia.vercel.app/propuesta** (`cleanUrls` en `vercel.json`; tiene `noindex`). Incluye galería de pantallas que abren cada parte de la web (con botón “← Volver a la propuesta”, visible solo para quien llega desde ahí), el asistente de turnos abierto con `?asistente=1`, calculadoras con fórmulas, hoja de decisiones que se envía por WhatsApp a Juan Cruz, presupuesto interactivo con total en pesos al MEP y descarga en PDF con diseño de impresión A4. Capturas en `dist/propuesta-img/`.
+
 ## Material para compartir
 
 - `material/Propuesta-Kder-Odontologia.pdf`: propuesta formal (11 páginas, A4 horizontal). Fuente editable en `material/propuesta/propuesta.html`: completar los precios de la página “Inversión” y exportar a PDF desde el navegador (Imprimir → Guardar como PDF, márgenes: ninguno, gráficos de fondo activados).
