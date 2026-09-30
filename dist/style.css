@@ -411,3 +411,11 @@ h3{font-weight:calc(var(--display-weight) + 40)}
 .backprop.show{display:inline-flex}
 .backprop:hover{background:var(--brand)}
 .bot.open~.backprop{display:none}
+/* Selectores como botones */
+.select-hidden{position:absolute!important;width:1px;height:1px;opacity:0;pointer-events:none}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.pills button{font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.pills button:hover{border-color:var(--brand)}
+.pills button[aria-checked=true]{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 6px 14px -8px var(--shadow)}
+/* Si el script no carga, el <select> nativo al menos se ve prolijo */
+#form select{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234d686b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/18px;padding-right:44px;cursor:pointer}
