@@ -405,3 +405,4 @@ h3{font-weight:calc(var(--display-weight) + 40)}
 .reviews-note{font-size:13px;color:var(--muted);margin:18px 0 0}
 @media(max-width:760px){.review-actions{grid-template-columns:1fr}.stars svg{width:30px;height:30px}}
 .contact-phones{display:flex;flex-wrap:wrap;gap:10px}
+.proposal-download{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin:30px 0 0}

@@ -17,6 +17,7 @@ Importar este repositorio en Vercel con Framework Preset **Other**, Build Comman
 ## Archivos
 
 - `dist/index.html`: contenido y estructura.
+- `dist/Propuesta-Kder-Odontologia.pdf`: la propuesta publicada dentro del sitio (botón en la sección “Propuesta” y enlace en la barra superior). Si se regenera el PDF en `material/`, copiarlo también acá.
 - `dist/style.css`: estilos y diseño adaptable.
 - `dist/app.js`: mapa de sedes (`sedes`), consulta de obra social y formulario de turno.
 - `dist/journey.js`: animación del diente con el scroll.
